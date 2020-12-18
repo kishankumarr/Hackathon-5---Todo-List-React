@@ -4,10 +4,10 @@ import "./../styles/App.css";
 
 function App() {
 	const [items, setItems] = useState([])
-	const [newitem, setnewItem] = useState("")
+	const [newitem, setnewItem] = useState("");
 	const additem = () => {
 		items.push(newitem);
-		setItems(items);
+		setItems([...items]);
 		setnewItem("");
 	}
 	const newitemchanged = (evt) => {
