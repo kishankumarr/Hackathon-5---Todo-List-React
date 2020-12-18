@@ -15,8 +15,8 @@ function ListItem(props) {
     return (
         <div className="list">
             {editmode ? (
-                <><textarea className="task" onChange={editeditemchanged} value={editeditem} placeholder="edittask"></textarea>
-                    <button className="btn" onClick={saveediteditem} disabled={editeditem.trim().length === 0}>save task</button></>
+                <><textarea className="editTask" onChange={editeditemchanged} value={editeditem} placeholder="edittask"></textarea>
+                    <button className="saveTask" onClick={saveediteditem} disabled={editeditem.trim().length === 0}>save task</button></>
             ) : (<>
                 {props.item}
                 <button className="edit" onClick={() => seteditmode(true)}>edit</button>
